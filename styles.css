@@ -48,7 +48,6 @@ img {
     text-align: center;
     color: var(--rojo);
     font-weight: bold;
-    padding: 10px;
 } 
 
 .success {
@@ -180,44 +179,48 @@ a {
 /*Lo ordenamos en dos filas cuando la pantalla no es grande
 .principal-content{
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
 }
 
 @media (min-width: 768px) { 
     .principal-content{
         display: grid;
-        grid-template-columns: 2fr 1fr; /*2 columns la primera 2 veces mas que la 2
+        grid-template-columns: 2fr 1fr; 
         column-gap: 5rem;
     }
-} */
-
-.entrada {
+} 
+*/
+.entrada{
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+}
 
+.entrada__img{
+    grid-row: 1/2; /*Imagen encima del texto*/
+    padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
     .entrada {
+        display: grid;
         grid-template-columns: 2fr 1fr;
         column-gap: 5rem;
     }
+    .entrada__img{
+        padding-top: 3rem;
+    }
+    
+    .entrada__text{
+        padding-top: 6rem;
+    }
 }
+
 
 /*Agarra el último elemento con la clase .entrada */
 .entrada:last-of-type {
     border: none;
     margin-bottom: 0;
 }
-
-.entrada__img{
-    padding-top: 3rem;
-}
-
-.entrada__text{
-    padding-top: 6rem;
-}
-
 
 
 
