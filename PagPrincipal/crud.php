@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../img/icon.png">
-    <link rel="stylesheet" href="../styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles.css">
     <!--para usar iconos (font-awesome) -->
     <script src="https://kit.fontawesome.com/2e3c62ed08.js" crossorigin="anonymous"></script>
 </head>
@@ -48,6 +48,12 @@
     <!--Tabla-->
     <h3 class = "text-center p-3"> Usuarios registrados</h3>
 
+    
+    <?php
+    include "../DB.php";
+    include "../controlador/delete_user.php";
+    ?>
+
     <div class = "container-fluid h4">
         <table class="table">
         <thead class = "bg-info">
@@ -77,9 +83,9 @@
             <td> <?= $datos -> Identificacion?> </td>
             <td> <?= $datos -> Correo?> </td>
         <td>
-            <!--obtenemos el id del registro al presionar editar, para poder traer los datos-->
-            <a href = "./edit.php?id= <?= $datos -> id ?>" class = "btn btn-small btn-warning"><i class="fa-regular fa-pen-to-square"></i></a>
-            <a href = "" class = "btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
+            <!--obtenemos el id para actualizar y eliminar-->
+            <a href = "./edit.php?idR= <?= $datos -> id ?>" class = "btn btn-small btn-warning"><i class="fa-regular fa-pen-to-square"></i></a>
+            <a href = "crud.php?idD= <?= $datos -> id ?>" class = "btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
         </td>
         </tr>
         <?php 

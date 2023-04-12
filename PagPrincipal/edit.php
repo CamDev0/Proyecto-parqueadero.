@@ -1,10 +1,12 @@
 
 <?php
-    //obtenemos el id que se envìa
-    $id = $_GET["id"];
-    //con ese id, hacemos la consulta
     include "../DB.php";
-    $sql = $conexion -> query("select * from usuarios where id = $id");
+
+    //obtenemos el id que se envìa
+    $idR = $_GET["idR"];
+    //con ese id, hacemos la consulta
+    $sql = $conexion -> query("select * from usuarios where id = $idR");
+
 ?>
 
 <!DOCTYPE html>
@@ -25,11 +27,11 @@
 
     <!--form-->
     <section>
-        <form class="formulario sombra" method = "post" action = "edit.php">
+        <form class="formulario sombra" method = "post">
             <!--Fieldset para dar información dentro del campo de formularios.-->
             <fieldset>
                 <legend>Edita cualquier campo.</legend>
-
+                <input type= "hidden" name = "idRegister" value = "<?= $_GET["idR"]?>">
                 <?php
                     while ($datos = $sql -> fetch_object()){ ?>
                         <div class="contenedor-campos">
@@ -68,7 +70,7 @@
                     <?php
                     }
 
-                    include "../controlador/modificar_user.php"
+                    include "../controlador/modificar_user.php";
                     ?>
 
                 <div class="ubicar-boton">
