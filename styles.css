@@ -11,12 +11,12 @@
 
 html{
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 /**Para simplificar el modelo caja de css. para que el padding los border, etc, no afecten el tamaño de la caja.**/
 *, *:before, *:after {
-    box-sizing: inherit;
+    box-sizing: inherit !important;
 }
 
 body{
@@ -30,9 +30,9 @@ img {
 }
 
 .container {
-    max-width: 120rem;
+    max-width: 120rem ;
     width: 90%;
-    margin: 0 auto; /*Centrar contenido horizontalmente*/
+    margin: 0 auto;  /*Centrar contenido horizontalmente*/
 }
 
 /*Utilidades*/
