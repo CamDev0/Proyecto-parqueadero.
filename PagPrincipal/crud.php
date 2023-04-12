@@ -17,7 +17,14 @@
 </head>
 
 <body>
-    <!--Header - nav-->
+    <!--Ventana emergente de confirmación-->
+
+    <script>
+        function eliminar(){
+            var rpta = confirm("¿Estás seguro de eliminar el usuario?");
+            return rpta;
+        }
+    </script>
 
     <header class="header no-margin no-padding"> 
         <div class="container">
@@ -85,7 +92,7 @@
         <td>
             <!--obtenemos el id para actualizar y eliminar-->
             <a href = "./edit.php?idR= <?= $datos -> id ?>" class = "btn btn-small btn-warning"><i class="fa-regular fa-pen-to-square"></i></a>
-            <a href = "crud.php?idD= <?= $datos -> id ?>" class = "btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
+            <a onclick="return eliminar()" href = "crud.php?idD= <?= $datos -> id ?>" class = "btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
         </td>
         </tr>
         <?php 
