@@ -38,7 +38,7 @@
             <br><br><br><br><br><br>
             <div class="text__img">
                 <h1 class="no-margin">Página oficial Parqueadero CCAJ</h1>
-                <h3 class="no-margin">Consulta nuestros servicios</h3>
+                <h3 class="no-margin">Consulta</h3>
             </div>
         </div>
     </div>
