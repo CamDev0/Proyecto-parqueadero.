@@ -37,7 +37,7 @@
        
                 </div> <!--contenedor-campos-->
                         <?php
-                        include("./DB.php");
+                        include("DB.php");
                         include("controlador/login_user.php");
                          ?>
                 <div class="ubicar-boton">
