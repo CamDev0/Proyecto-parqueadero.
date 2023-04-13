@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="./styles.css">
-    <title>Registro</title>
+    <title>Registro | CCAJ</title>
 </head>
 <body>
 
