@@ -17,19 +17,10 @@
 <body>
     <!--Header - nav-->
 
-    <header class="header no-margin no-padding"> 
-        <div class="container">
-            <div class="navbar">
-                <a class="logo" href="#">
-                    <h1 class="logo__name no-margin text-center">Parqueadero<spa class="logo__bold">CCAJ</spa> </h1>
-                </a>
-                    <nav class="nav">
-                        <a href="consultas.php" class="nav__link">Consultas</a>
-                        <a href="crud.php" class="nav__link">Editar datos</a>
-                        <a href="../index.html" class="nav__link">Salir</a>
-                    </nav>
-            </div>
-        </div>
+    <header>
+    <?php
+        require_once("../vistas/headerLogin.php");
+    ?>
     </header>
     
     
@@ -70,14 +61,11 @@
 
     </section>
 
-    <footer class="footer-principal">
-        <div class="container">
-            <div class="navbar"> 
-                <a class="logo" href="#">
-                    <h1 class="logo__name no-margin text-center">Parqueadero<span class="logo__bold">CCAJ</span> </h1>
-                </a>
-            </div>
-        </div>
+    <footer>
+    <?php
+        require_once("../vistas/footerLogin.php");
+    ?>
     </footer>
+
 </body>
 </html>

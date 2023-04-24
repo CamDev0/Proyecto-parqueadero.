@@ -15,7 +15,8 @@
             //pregunto si existen esos datos
 
             if ($datos = $sql -> fetch_object()) {
-                header("location: ./PagPrincipal/principal.html");
+                //header("location: ./PagPrincipal/principal.php");
+                echo '<script>window.location="PagPrincipal/principal.html"</script';
             } else {
                 echo '<div class = "alert">Datos incorrectos, reintente por favor</div>';
             }

@@ -15,6 +15,11 @@
 </head>
 <body>
 
+    <header>
+    <?php
+        require_once("vistas/header.php");
+    ?>
+    </header>
     <!--form-->
     <section>
         <div class = "text-center tittles">Formulario de Registro</div>
@@ -68,11 +73,15 @@
         </form>
     </section>
 
-    <footer class="footer">
+    <div class="text-center">
         <p>Inicia sesión <span class="footer-name"> <a href="login.php" >Aquí.</a></span> </p>
-        <p>Todos los derechos reservados. <span class="footer-name"> <a href="index.html">Parqueadero CCAJ</a></span> </p>
-    </footer>
+    </div>
 
+    <footer>
+    <?php
+        require_once("vistas/footer.php");
+    ?>
+    </footer>
     <!------------------>
 
 </body>

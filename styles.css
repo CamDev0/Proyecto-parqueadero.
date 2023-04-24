@@ -1,28 +1,28 @@
 :root {
-    --azulbajo: #b5c5d7;
-    --piel:#ecdfdb;
-    --azul:#c6e1f1;
-    --negro: #050505;
-    --rosa: #f409ec;
-    --morado: #e4bcd4;
+
+    --negro: #040505;
+    --primario:#262F33;
+    --primario-light:#263133;
+    --secundario: #263327;
+    --secundario-light: #333327;
     --rojo:  #c0034c;  
     --white: #f4f4f4;
 }
 
 html{
     font-size: 62.5%;
-    box-sizing: border-box !important;
+    box-sizing: border-box;
 }
 
 /**Para simplificar el modelo caja de css. para que el padding los border, etc, no afecten el tamaño de la caja.**/
 *, *:before, *:after {
-    box-sizing: inherit !important;
+    box-sizing: inherit;
 }
 
 body{
     font-size: 16px; 
     font-family: 'Raleway', sans-serif;
-    background-image: linear-gradient(to top, var(--morado) 0%, var(--azul) 100%);
+    background-image: linear-gradient(to top, var(--white) 0%, var(--primario) 100%);
 }
 
 img {
@@ -160,7 +160,7 @@ a {
 }
 
 .navbar {
-    background-color: #050505;
+    background-color: var(--negro);
 }
 
 .nav__link {
@@ -174,22 +174,6 @@ a {
 }
 
 
-/*section __ principal-content*/
-
-/*Lo ordenamos en dos filas cuando la pantalla no es grande
-.principal-content{
-    display: grid;
-    grid-template-rows: repeat(2,auto);
-}
-
-@media (min-width: 768px) { 
-    .principal-content{
-        display: grid;
-        grid-template-columns: 2fr 1fr; 
-        column-gap: 5rem;
-    }
-} 
-*/
 .entrada{
     display: grid;
     grid-template-rows: repeat(2,auto);
@@ -242,7 +226,7 @@ a {
 }
 
 .boton {
-    background-color: var(--azulbajo);
+    background-color: var(--white);
     color: #23282b;
     padding: 1rem 30rem;
     font-size: 2rem;
@@ -262,7 +246,7 @@ a {
 /*form*/
 
 .formulario {
-    background-color: var(--azul);
+    background-color: var(--white);
     width: min(100rem, 100%); /*Toma el valor mas pequeño entre esos dos valores*/
     margin: 0 auto;
     padding: 2rem;
@@ -298,7 +282,7 @@ a {
 
 .campos {
     margin-bottom: 2rem;
-    color: var(--blanco);
+    color: var(--white);
 }
 
 .campos textarea {

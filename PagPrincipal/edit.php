@@ -25,6 +25,12 @@
 </head>
 <body>
 
+    <header>
+    <?php
+        require_once("../vistas/headerLogin.php");
+    ?>
+    </header>
+    <br><br><br>
     <!--form-->
     <section>
         <form class="formulario sombra" method = "post">
@@ -81,12 +87,11 @@
         </form>
     </section>
 
-    <footer class="footer">
-        <p>Todos los derechos reservados. <span class="footer-name"> <a href="./principal.html">Parqueadero CCAJ</a></span> </p>
+    <footer>
+    <?php
+        require_once("../vistas/footerLogin.php");
+    ?>
     </footer>
-
-    <!------------------>
-
 </body>
 </html>
 
