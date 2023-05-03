@@ -56,7 +56,6 @@
         <table class="table">
         <thead class = "bg-info">
         <tr>
-        <th scope="col">id</th>
         <th scope="col">Nombre</th>
         <th scope="col">Apellido</th>
         <th scope="col">Teléfono</th>
@@ -74,7 +73,6 @@
         //recorre todos los datos el while
         while ($datos = $sql -> fetch_object()){  ?>
         <tr>
-            <td> <?= $datos -> id?> </td>
             <td> <?= $datos -> Nombre?> </td>
             <td> <?= $datos -> Apellido?> </td>
             <td> <?= $datos -> Telefono?> </td>

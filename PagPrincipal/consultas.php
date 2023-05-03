@@ -32,14 +32,65 @@
             </div>
         </div>
     </div>
+    <br>
+
+    <?php
+    include "../DB.php";
+    //mandamos el post del filtro (buscar)
+    if (!isset($_POST['buscar'])){$_POST['buscar'] = '';}
+    ?>
+
+<form id="form2" name="form2" method = "post" action = "consultas.php"> 
+    <div class = "mb-3">
+        <label class= "form-label">Buscar por nombre o apellido</label>
+        <input type= "text" class="form-control" id="buscar" name="buscar" value = "<?php echo $_POST['buscar'] ?>">
+    </div>
+    <div class="col-1">
+        <input type= "submit" class = "btn " value="ver" style = "background-color: #7BB4E3;">
+    </div>
+
+
+
+    <?php
+    //si post está vacío que me ponga un espacio
+    if ($_POST['buscar'] == ''){$_POST['buscar'] = ' ';}
+
+    //separa los campos para la busqueda
+    $aKeyword = explode(" ", $_POST['buscar']);
     
+    //primera query que nos muestre todos los datos
+    if ($_POST['buscar'] == '')
+    {
+        $query = "select Nombre, Apellido, Telefono, Identificacion, Correo  from usuarios";
+    }
+    //sino está vacío el post pues que traiga el filtro
+    else{
+        $query = "select Nombre, Apellido, Telefono, Identificacion, Correo  from usuarios ";
+
+        if ($_POST['buscar'] != '')
+        {
+            $query .= "WHERE (Nombre LIKE LOWER('%".$aKeyword[0]."%') OR Apellido LIKE LOWER('%".$aKeyword[0]."%'))";
+        }
+        //Por si escribimos dos palabras
+        for ($i = 1; $i < count($aKeyword); $i++)
+        {
+            if(!empty($aKeyword[$i]))
+            {
+                $query .= " OR Nombre LIKE '%" .$aKeyword[$i] ."%' OR Apellido LIKE '%" .$aKeyword[$i] ."%' ";
+            }
+        }
+    }
+
+    $sql = $conexion -> query($query);
+
+    ?>
+</form>
     <!--Tabla-->
     <h3 class = "text-center p-3"> Usuarios registrados</h3>
     <div class = "container-fluid h4">
     <table class="table">
     <thead class = "bg-info">
     <tr>
-      <th scope="col">id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
       <th scope="col">Teléfono</th>
@@ -50,13 +101,13 @@
   <tbody>
     <?php
 
-    include "../DB.php";
-    $sql = $conexion -> query("select * from usuarios");
+    //include "../DB.php";
+    //$sql = $conexion -> query($query);
+    //$sql = $conexion -> query("select * from usuarios");
 
     //recorre todos los datos de la DB el while
-    while ($datos = $sql -> fetch_object()){  ?>
+   /* while ($datos = $sql -> fetch_object()){  ?>
         <tr>
-        <td> <?= $datos -> id?> </td>
         <td> <?= $datos -> Nombre?> </td>
         <td> <?= $datos -> Apellido?> </td>
         <td> <?= $datos -> Telefono?> </td>
@@ -65,11 +116,21 @@
       </tr>
     <?php 
     }
+*/
+    while ($rowSql = $sql -> fetch_assoc()){  ?>
+        <tr>
+        <td> <?php echo $rowSql["Nombre"];?> </td>
+        <td> <?php echo $rowSql["Apellido"];?> </td>
+        <td> <?php echo $rowSql["Telefono"];?> </td>
+        <td> <?php echo $rowSql["Identificacion"];?> </td>
+        <td> <?php echo $rowSql["Correo"];?> </td>
+      </tr>
+    <?php 
+    }
     
    ?>
-
   </tbody>
-</table>
+  </table>
 
     <footer>
     <?php
