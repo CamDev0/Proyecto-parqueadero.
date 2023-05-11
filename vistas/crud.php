@@ -28,7 +28,7 @@
 
     <header>
     <?php
-        require_once("../vistas/headerLogin.php");
+        require_once("headerLogin.php");
     ?>
     </header>
     
@@ -41,14 +41,13 @@
                 <h3 class="no-margin">Actualiza</h3>
             </div>
         </div>
-    </div>
-    
+    </div> 
+
     <!--Tabla-->
     <h3 class = "text-center p-3"> Usuarios registrados</h3>
 
-    
     <?php
-    include "../DB.php";
+    include "../modelo/DB.php";
     include "../controlador/delete_user.php";
     ?>
 
@@ -67,8 +66,9 @@
         <tbody>
         <?php
 
-        include "../DB.php";
+        include "../modelo/DB.php";
         $sql = $conexion -> query("select * from usuarios");
+
 
         //recorre todos los datos el while
         while ($datos = $sql -> fetch_object()){  ?>
@@ -88,13 +88,14 @@
         }
 
         ?>
+        
         </tbody>
         </table>
     </div>
 
     <footer>
     <?php
-        require_once("../vistas/footerLogin.php");
+        require_once("footerLogin.php");
     ?>
     </footer>
 

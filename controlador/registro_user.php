@@ -19,13 +19,15 @@ if(!empty($_POST["registro"]))
         
         //registramos a la BD
         
-        $sql = $conexion -> query("INSERT INTO usuarios(Nombre, Apellido, Telefono, Identificacion, Correo) values ('$nombre', '$apellido','$tel', '$id', '$email')");
+        $sql = $conexion -> query("INSERT INTO usuarios(Nombre, Apellido, Telefono, Identificacion, Correo) values ('$nombre', '$apellido','$tel', $id, '$email')");
+
+
 
         //validamos si el usuario se ingresó correctamente
-
         if ($sql == 1) {
             echo '<div class="success">Usuario registrado correctamente </div>';
-        } else {
+        }
+        else {
             echo '<div class="alert">Error al registrar, reintente por favor </div>';
         }
         

@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="icon" href="img/icon.png">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../styles.css">
     <title>Login | CCAJ</title>
 </head>
 <body>
 
     <header>
     <?php
-        require_once("vistas/header.php");
+        require_once("header.php");
     ?>
     </header>
     <!--form-->
@@ -42,8 +42,8 @@
        
                 </div> <!--contenedor-campos-->
                         <?php
-                        include("DB.php");
-                        include("controlador/login_user.php");
+                        include("../modelo/DB.php");
+                        include("../controlador/login_user.php");
                          ?>
                 <div class="ubicar-boton">
                     <input class="boton" type="submit" value="Ingresar" name="ingresar">
@@ -59,7 +59,7 @@
     
     <footer>
     <?php
-        require_once("vistas/footer.php");
+        require_once("footer.php");
     ?>
     </footer>
 

@@ -17,7 +17,7 @@
 
     <header>
     <?php
-        require_once("vistas/header.php");
+        require_once("header.php");
     ?>
     </header>
     <!--form-->
@@ -62,8 +62,8 @@
                 </div> <!--contenedor-campos-->
 
                      <?php
-                    include("./DB.php");
-                    include("controlador/registro_user.php");
+                    include("../modelo/DB.php");
+                    include("../controlador/registro_user.php");
                     ?>
                 <div class="ubicar-boton">
                     <input class="boton" type="submit" value="Registrar" name="registro">
@@ -79,7 +79,7 @@
 
     <footer>
     <?php
-        require_once("vistas/footer.php");
+        require_once("footer.php");
     ?>
     </footer>
     <!------------------>

@@ -11,14 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="img/icon.png">
 
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../styles.css">
 
 </head>
 
 <body>
     <header>
     <?php
-        require_once("vistas/header.php");
+        require_once("header.php");
     ?>
     </header>
     
@@ -41,7 +41,7 @@
 
             <article class="entrada">
                 <div class="entrada__img">
-                    <img src="img/servicio1.jpg" alt="firstImage">
+                    <img src="../img/servicio1.jpg" alt="firstImage">
                 </div>
 
                 <div class="entrada__text">
@@ -61,7 +61,7 @@
 
             <article class="entrada">
                 <div class="entrada__img">
-                    <img src="img/servicio2.jpg" alt="twoImage">      
+                    <img src="../img/servicio2.jpg" alt="twoImage">      
                 </div>
 
                 <div class="entrada__text">
@@ -86,7 +86,7 @@
 
     <footer>
         <?php
-            require_once("vistas/footer.php");
+            require_once("footer.php");
         ?>
     </footer>
 </body>

@@ -18,7 +18,7 @@
     <!--Header - nav-->
     <header>
     <?php
-        require_once("../vistas/headerLogin.php");
+        require_once("headerLogin.php");
     ?>
     </header>
     
@@ -35,7 +35,7 @@
     <br>
 
     <?php
-    include "../DB.php";
+    include "../modelo/DB.php";
     //mandamos el post del filtro (buscar)
     if (!isset($_POST['buscar'])){$_POST['buscar'] = '';}
     ?>
@@ -101,22 +101,6 @@
   <tbody>
     <?php
 
-    //include "../DB.php";
-    //$sql = $conexion -> query($query);
-    //$sql = $conexion -> query("select * from usuarios");
-
-    //recorre todos los datos de la DB el while
-   /* while ($datos = $sql -> fetch_object()){  ?>
-        <tr>
-        <td> <?= $datos -> Nombre?> </td>
-        <td> <?= $datos -> Apellido?> </td>
-        <td> <?= $datos -> Telefono?> </td>
-        <td> <?= $datos -> Identificacion?> </td>
-        <td> <?= $datos -> Correo?> </td>
-      </tr>
-    <?php 
-    }
-*/
     while ($rowSql = $sql -> fetch_assoc()){  ?>
         <tr>
         <td> <?php echo $rowSql["Nombre"];?> </td>
@@ -134,7 +118,7 @@
 
     <footer>
     <?php
-        require_once("../vistas/footerLogin.php");
+        require_once("footerLogin.php");
     ?>
     </footer>
     

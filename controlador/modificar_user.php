@@ -15,7 +15,7 @@
 
             //validamos si se cumple.
             if ($sql == 1) {
-                header("location: ../PagPrincipal/crud.php");
+                header("location: ../vistas/crud.php");
             } else {
                 echo '<div class = "alert"> Error al actualizar, reintente por favor </div>';
             }

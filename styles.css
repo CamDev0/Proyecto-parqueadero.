@@ -7,6 +7,7 @@
     --secundario-light: #333327;
     --rojo:  #c0034c;  
     --white: #f4f4f4;
+    --suave: #828282;
 }
 
 html{
@@ -246,7 +247,7 @@ a {
 /*form*/
 
 .formulario {
-    background-color: var(--white);
+    background-color: var(--primario-light);
     width: min(100rem, 100%); /*Toma el valor mas pequeño entre esos dos valores*/
     margin: 0 auto;
     padding: 2rem;
@@ -260,7 +261,7 @@ a {
 .formulario legend {
     text-align: center;
     font-size: 2rem; /*Para aumentar el tamaño de la fuente o letra.*/
-    color: var(--rojo);
+    color: var(--suave);
     font-weight: 700;
     margin-bottom: 2rem;
 
@@ -282,7 +283,7 @@ a {
 
 .campos {
     margin-bottom: 2rem;
-    color: var(--white);
+    color: var(--suave);
 }
 
 .campos textarea {
@@ -291,7 +292,7 @@ a {
 
 
 .campos label {
-    color: var(--negro);
+    color: var(--white);
     font-weight: bold;
     margin-bottom: 1rem;
     display: block;

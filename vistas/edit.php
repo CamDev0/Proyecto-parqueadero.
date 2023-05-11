@@ -1,6 +1,6 @@
 
 <?php
-    include "../DB.php";
+    include "../modelo/DB.php";
 
     //obtenemos el id que se envìa
     $idR = $_GET["idR"];
@@ -27,7 +27,7 @@
 
     <header>
     <?php
-        require_once("../vistas/headerLogin.php");
+        require_once("headerLogin.php");
     ?>
     </header>
     <br><br><br>
@@ -89,7 +89,7 @@
 
     <footer>
     <?php
-        require_once("../vistas/footerLogin.php");
+        require_once("footerLogin.php");
     ?>
     </footer>
 </body>
