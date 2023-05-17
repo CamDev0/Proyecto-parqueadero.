@@ -305,7 +305,17 @@ a {
     border-radius: 8px;
 }
 
+.pass{
+    position: absolute;
+    height: 25px;
+    transform: translateY(40%);
+    opacity: 0.4;
+    cursor: pointer;
+}
 
+.pass:hover{
+    opacity: 0.9;
+}
 /*Footer*/
 
 .footer-principal {

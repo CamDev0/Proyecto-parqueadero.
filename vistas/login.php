@@ -37,7 +37,8 @@
                     <div class="campos">
                         <label>Contraseña</label>
 
-                        <input class="form" type="text" placeholder="Tu identificación:)" name="clave">
+                        <input class="form" type="password" placeholder="Tu identificación:)" name="clave" id="pass">
+                        <img src="../img/showpassword.png" class="pass" id="eye">
                     </div> 
        
                 </div> <!--contenedor-campos-->
@@ -62,6 +63,6 @@
         require_once("footer.php");
     ?>
     </footer>
-
+<script src="../controlador/password.js"></script>
 </body>
 </html>
