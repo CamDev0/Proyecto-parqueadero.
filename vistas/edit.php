@@ -64,6 +64,12 @@
                         
                             <input class="form" type="id"  name="id" value = "<?= $datos -> Identificacion?>">
                         </div>
+
+                        <div class="campos">
+                            <label>ID del vehículo</label>
+                        
+                            <input class="form" type="id"  name="placa" value = "<?= $datos -> Placa?>">
+                        </div>
     
                         <div class="campos">
                             <label>Correo</label>

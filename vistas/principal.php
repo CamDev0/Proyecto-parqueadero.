@@ -61,10 +61,6 @@
 
     </section>
 
-    <?php
-    include("alerta.php");
-    ?>
-
     <footer>
     <?php
         require_once("footerLogin.php");

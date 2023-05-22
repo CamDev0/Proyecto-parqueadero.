@@ -38,20 +38,71 @@
             <br><br><br><br><br><br>
             <div class="text__img">
                 <h1 class="no-margin">Página oficial Parqueadero CCAJ</h1>
-                <h3 class="no-margin">Actualiza</h3>
+                <h3 class="no-margin">Consulta y Actualiza</h3>
             </div>
         </div>
     </div> 
 
-    <!--Tabla-->
-    <h3 class = "text-center p-3"> Usuarios registrados</h3>
-
     <?php
     include "../modelo/DB.php";
     include "../controlador/delete_user.php";
+
+    if (!isset($_POST['buscar'])){$_POST['buscar'] = '';}
     ?>
 
-    <div class = "container-fluid h4">
+    <form id="form2" name="form2" method = "post" action = "crud.php"> 
+        <br>
+    <div class = "campos">
+        <label class= "form-label">| Buscar por nombre, apellido, identificación o placa</label>
+        <input type= "text" class="form-filtro" id="buscar" name="buscar" value = "<?php echo $_POST['buscar'] ?>">
+    </div>
+    <div>
+        <input type= "submit" class = "boton-filtro" value="Buscar">
+        <!-- <input type= "submit" class = "boton-filtro" value="Limpiar"> -->
+    </div>
+
+
+
+    <?php
+    //si post está vacío que me ponga un espacio
+    if ($_POST['buscar'] == ''){$_POST['buscar'] = ' ';}
+
+    //separa los campos para la busqueda
+    $aKeyword = explode(" ", $_POST['buscar']);
+    
+    //primera query que nos muestre todos los datos
+    if ($_POST['buscar'] == '')
+    {
+        $query = "select id, Nombre, Apellido, Telefono, Identificacion, Placa, Correo  from usuarios";
+    }
+    //sino está vacío el post pues que traiga el filtro
+    else{
+        $query = "select id, Nombre, Apellido, Telefono, Identificacion, Placa, Correo  from usuarios ";
+
+        if ($_POST['buscar'] != '')
+        {
+            $query .= "WHERE (Nombre LIKE LOWER('%".$aKeyword[0]."%') OR Apellido LIKE LOWER('%".$aKeyword[0]."%') OR Identificacion LIKE LOWER('%".$aKeyword[0]."%') OR Placa LIKE LOWER('%".$aKeyword[0]."%'))";
+        }
+        //Por si escribimos dos palabras
+        for ($i = 1; $i < count($aKeyword); $i++)
+        {
+            if(!empty($aKeyword[$i]))
+            {
+                $query .= " OR Nombre LIKE '%" .$aKeyword[$i] ."%' OR Apellido LIKE '%" .$aKeyword[$i] ."%' OR Identificacion LIKE '%" .$aKeyword[$i] ."%' OR Placa LIKE '%" .$aKeyword[$i] ."%' ";
+            }
+        }
+    }
+
+    $sql = $conexion -> query($query);
+
+    ?>
+</form>
+
+    <!--Tabla-->
+    <h3 class = "text-center p-3"> Usuarios registrados</h3>
+
+
+    <div class = "container-fluid h4 d-flex">
         <table class="table">
         <thead class = "bg-info">
         <tr>
@@ -59,39 +110,46 @@
         <th scope="col">Apellido</th>
         <th scope="col">Teléfono</th>
         <th scope="col">Identificación</th>
+        <th scope="col">Placa</th>
         <th scope="col">Correo</th>
         <th scope="col">Editar / Eliminar</th>
         </tr>
         </thead>
         <tbody>
+
         <?php
+        $sql2 = $conexion -> query("select * from usuarios");
 
-        include "../modelo/DB.php";
-        $sql = $conexion -> query("select * from usuarios");
+        while ($datos = $sql2 -> fetch_object()){
+            ?>
+                    
+            <?php
+             while ($rowSql = $sql -> fetch_assoc()){
+                ?>
+            <tr>
+                <td> <?php echo $rowSql["Nombre"];?> </td>
+                <td> <?php echo $rowSql["Apellido"];?> </td>
+                <td> <?php echo $rowSql["Telefono"];?> </td>
+                <td> <?php echo $rowSql["Identificacion"];?> </td>
+                <td> <?php echo $rowSql["Placa"];?> </td>
+                <td> <?php echo $rowSql["Correo"];?> </td>
+                <td>
+                <a href = "./edit.php?idR= <?= $rowSql["id"];?>" class = "btn btn-small btn-warning"><i class="fa-regular fa-pen-to-square"></i></a>
+                <a onclick="return eliminar()" href = "crud.php?idD= <?= $rowSql["id"]; ?>" class = "btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
+                </td>
+            </tr> 
 
-
-        //recorre todos los datos el while
-        while ($datos = $sql -> fetch_object()){  ?>
-        <tr>
-            <td> <?= $datos -> Nombre?> </td>
-            <td> <?= $datos -> Apellido?> </td>
-            <td> <?= $datos -> Telefono?> </td>
-            <td> <?= $datos -> Identificacion?> </td>
-            <td> <?= $datos -> Correo?> </td>
-        <td>
-            <!--obtenemos el id para actualizar y eliminar-->
-            <a href = "./edit.php?idR= <?= $datos -> id ?>" class = "btn btn-small btn-warning"><i class="fa-regular fa-pen-to-square"></i></a>
-            <a onclick="return eliminar()" href = "crud.php?idD= <?= $datos -> id ?>" class = "btn btn-small btn-danger"><i class="fa-solid fa-eraser"></i></a>
-        </td>
-        </tr>
-        <?php 
+            <?php 
+            }
+            
+            ?> 
+        <?php
         }
-
+    
         ?>
-        
         </tbody>
         </table>
-    </div>
+    </div> 
 
     <footer>
     <?php

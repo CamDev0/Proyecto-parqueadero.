@@ -6,7 +6,7 @@
 
 if(!empty($_POST["registro"]))
 {
-    if (empty($_POST["nombre"]) or empty($_POST["apellido"]) or empty($_POST["tel"]) or empty($_POST["id"]) or empty($_POST["email"])) {
+    if (empty($_POST["nombre"]) or empty($_POST["apellido"]) or empty($_POST["tel"]) or empty($_POST["id"])  or empty($_POST["placa"]) or empty($_POST["email"])) {
     echo '<div class="alert">Algunos campos pueden estar vacíos </div>';
     } else {
         //capturamos los datos
@@ -15,11 +15,12 @@ if(!empty($_POST["registro"]))
         $apellido = $_POST["apellido"];
         $tel = $_POST["tel"];
         $id = $_POST["id"];
+        $placa = $_POST["placa"];
         $email = $_POST["email"];
         
         //registramos a la BD
         
-        $sql = $conexion -> query("INSERT INTO usuarios(Nombre, Apellido, Telefono, Identificacion, Correo) values ('$nombre', '$apellido','$tel', $id, '$email')");
+        $sql = $conexion -> query("INSERT INTO usuarios(Nombre, Apellido, Telefono, Identificacion, Placa, Correo) values ('$nombre', '$apellido','$tel', $id, '$placa', '$email')");
 
 
 

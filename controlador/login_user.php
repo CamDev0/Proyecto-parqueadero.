@@ -10,7 +10,7 @@
 
             //Consulta
 
-            $sql = $conexion -> query("SELECT * FROM usuarios WHERE Nombre = '$usuario' and Identificacion = '$clave'");
+            $sql = $conexion -> query("SELECT * FROM admin WHERE User = '$usuario' and Password = '$clave'");
 
             //pregunto si existen esos datos
 

@@ -2,16 +2,17 @@
 
 <?php
     if(!empty($_POST["edit"])) {
-        if (!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["tel"]) and !empty($_POST["id"]) and !empty($_POST["email"]) ) {
+        if (!empty($_POST["nombre"]) and !empty($_POST["apellido"]) and !empty($_POST["tel"]) and !empty($_POST["id"]) and !empty($_POST["placa"]) and !empty($_POST["email"]) ) {
            
             $idR = $_POST["idRegister"];
             $nombre = $_POST["nombre"];
             $apellido = $_POST["apellido"];
             $tel = $_POST["tel"];
             $cod = $_POST["id"];
+            $placa = $_POST["placa"];
             $email = $_POST["email"];
 
-            $sql = $conexion -> query("Update usuarios SET Nombre = '$nombre', Apellido = '$apellido', Telefono = '$tel', Identificacion = '$cod', Correo = '$email' WHERE id = $idR");
+            $sql = $conexion -> query("Update usuarios SET Nombre = '$nombre', Apellido = '$apellido', Telefono = '$tel', Identificacion = '$cod', Placa = '$placa', Correo = '$email' WHERE id = $idR");
 
             //validamos si se cumple.
             if ($sql == 1) {

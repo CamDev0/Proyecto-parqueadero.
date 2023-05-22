@@ -17,28 +17,28 @@
 
     <header>
     <?php
-        require_once("header.php");
+        require_once("headerLogin.php");
     ?>
     </header>
     <!--form-->
     <section>
-        <div class = "text-center tittles">Formulario de Registro</div>
+      <div class = "text-center tittles"></div>
         <form class="formulario sombra" action="registro.php" method="post">
             <!--Fieldset para dar información dentro del campo de formularios.-->
             <fieldset>
-                <legend>Registrate llenando todos los campos.</legend>
+                <legend>Registra llenando todos los campos.</legend>
 
                 <div class="contenedor-campos">
                     <div class="campos">
                         <label>Nombre</label>
 
-                        <input class="form" type="text" placeholder="Tu primer nombre :)" name="nombre">
+                        <input class="form" type="text" placeholder="Primer nombre :)" name="nombre">
                     </div>  
 
                     <div class="campos">
                         <label>Apellido</label>
 
-                        <input class="form" type="text" placeholder="Tu primer apellido :)" name="apellido">
+                        <input class="form" type="text" placeholder="Primer apellido :)" name="apellido">
                     </div> 
 
                     <div class="campos">
@@ -50,13 +50,19 @@
                     <div class="campos">
                         <label>Identificación</label>
                     
-                        <input class="form" type="id" placeholder="Tu Número de Identificación" name="id">
+                        <input class="form" type="id" placeholder="Número de Identificación" name="id">
+                    </div>
+
+                    <div class="campos">
+                        <label>Placa del Vehículo</label>
+                    
+                        <input class="form" type="id" placeholder="ID del vehículo" name="placa">
                     </div>
 
                     <div class="campos">
                         <label>Correo</label>
                     
-                        <input class="form" type="email" placeholder="Tu Email" name = "email">
+                        <input class="form" type="email" placeholder="Email" name = "email">
                     </div>
                     
                 </div> <!--contenedor-campos-->
@@ -73,13 +79,9 @@
         </form>
     </section>
 
-    <div class="text-center">
-        <p>Inicia sesión <span class="footer-name"> <a href="login.php" >Aquí.</a></span> </p>
-    </div>
-
     <footer>
     <?php
-        require_once("footer.php");
+        require_once("footerLogin.php");
     ?>
     </footer>
     <!------------------>

@@ -21,7 +21,7 @@
     </header>
     <!--form-->
     <section>
-        <div class = "text-center tittles">Inicia sesión con tu nombre y tu identificación</div>
+        <div class = "text-center tittles"></div>
         <form class="formulario sombra" action="login.php" method="post">
             <!--Fieldset para dar información dentro del campo de formularios.-->
             <fieldset>
@@ -31,13 +31,13 @@
                     <div class="campos">
                         <label>Usuario</label>
 
-                        <input class="form" type="text" placeholder="El nombre que usaste al registrarte:)" name="usuario">
+                        <input class="form" type="text" placeholder=":/" name="usuario">
                     </div>  
 
                     <div class="campos">
                         <label>Contraseña</label>
 
-                        <input class="form" type="password" placeholder="Tu identificación:)" name="clave" id="pass">
+                        <input class="form" type="password" placeholder=":/" name="clave" id="pass">
                         <img src="../img/showpassword.png" class="pass" id="eye">
                     </div> 
        
@@ -54,9 +54,6 @@
         </form>
     </section>
 
-    <div class="text-center">
-        <p>Puedes registrarte <span class="footer-name"> <a href="registro.php" >Aquí.</a></span> </p>
-    </div>
     
     <footer>
     <?php
