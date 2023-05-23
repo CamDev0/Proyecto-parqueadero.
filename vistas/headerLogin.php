@@ -8,6 +8,7 @@
                     <a href="./registro.php" class="nav__link">Registrar</a>
                         <!-- <a href="consultas.php" class="nav__link">Consultas</a> -->
                         <a href="crud.php" class="nav__link">Editar Datos</a>
+                        <a href="time.php" class="nav__link">Usuarios Activos</a>
                         <a href="index.php" class="nav__link">Salir</a>
                     </nav>
             </div>

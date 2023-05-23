@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/icon.png">
+    <link rel="icon" href="../img/icon.png">
     <link rel="stylesheet" href="./styles.css">
     <title>Registro | CCAJ</title>
 </head>
@@ -27,7 +27,6 @@
             <!--Fieldset para dar información dentro del campo de formularios.-->
             <fieldset>
                 <legend>Registra llenando todos los campos.</legend>
-
                 <div class="contenedor-campos">
                     <div class="campos">
                         <label>Nombre</label>
@@ -70,11 +69,17 @@
                      <?php
                     include("../modelo/DB.php");
                     include("../controlador/registro_user.php");
+                    include("./date.php");
+                    include("../controlador/date_controller.php");
                     ?>
+
+                <input type= "hidden" name = "fecha" value = "<?= $fecha?>">
+                <input type= "hidden" name = "hora" value = "<?= $hour?>">
+                <input type= "hidden" name = "min" value = "<?= $min?>">
+
                 <div class="ubicar-boton">
                     <input class="boton" type="submit" value="Registrar" name="registro">
                 </div>
-
             </fieldset>
         </form>
     </section>
