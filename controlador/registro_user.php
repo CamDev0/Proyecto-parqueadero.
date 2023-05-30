@@ -26,7 +26,7 @@ if(!empty($_POST["registro"]))
 
         //validamos si el usuario se ingresó correctamente
         if ($sql == 1) {
-            echo '<div class="success">Usuario registrado correctamente </div>';
+            echo '<div class="success">Cliente registrado correctamente </div>';
         }
         else {
             echo '<div class="alert">Error al registrar, reintente por favor </div>';

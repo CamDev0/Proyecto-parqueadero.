@@ -40,7 +40,7 @@
                 <input type= "hidden" name = "idRegister" value = "<?= $_GET["idR"]?>">
                 <?php
                     while ($datos = $sql -> fetch_object()){ ?>
-                        <div class="contenedor-campos">
+                    <div class="contenedor-campos">
                         <div class="campos">
                             <label>Nombre</label>
     

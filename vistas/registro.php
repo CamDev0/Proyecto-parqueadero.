@@ -26,7 +26,7 @@
         <form class="formulario sombra" action="registro.php" method="post">
             <!--Fieldset para dar información dentro del campo de formularios.-->
             <fieldset>
-                <legend>Registra llenando todos los campos.</legend>
+                <legend>Registrar clientes.</legend>
                 <div class="contenedor-campos">
                     <div class="campos">
                         <label>Nombre</label>
@@ -69,8 +69,8 @@
                      <?php
                     include("../modelo/DB.php");
                     include("../controlador/registro_user.php");
-                    include("./date.php");
                     include("../controlador/date_controller.php");
+                    include("./date.php");
                     ?>
 
                 <input type= "hidden" name = "fecha" value = "<?= $fecha?>">
