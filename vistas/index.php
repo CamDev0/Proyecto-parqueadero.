@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="icon" href="../img/icon.png">
 
     <link rel="stylesheet" href="../styles.css">
@@ -46,13 +46,13 @@
 
                 <div class="entrada__text">
                     <h4 class="no-margin">Parqueo de Carros</h4>
-                    <p>
+                    <p style="text-align: justify;">
                         Somos una empresa dedicada a ofrecer un espacio seguro y conveniente para el estacionamiento de carros. Nos aseguramos de que su vehículo esté protegido mientras realiza sus actividades diarias.
                     </p>
-                    <p>
-                        Contamos con un amplio estacionamiento cubierto, servicio de seguridad las 24 horas y personal capacitado para atender a nuestros clientes. Además, ofrecemos tarifas competitivas y descuentos por estacionamientos prolongados. Nuestra misión es brindar una experiencia de estacionamiento cómoda y confiable a nuestros clientes, garantizando la protección de sus vehículos y su satisfacción en todo momento.
+                    <p style="text-align: justify;">
+                    Contamos con un amplio estacionamiento cubierto, servicio de seguridad las 24 horas y personal capacitado para atender a nuestros clientes. Además, ofrecemos tarifas competitivas y descuentos por estacionamientos prolongados. Nuestra misión es brindar una experiencia de estacionamiento cómoda y confiable a nuestros clientes, garantizando la protección de sus vehículos y su satisfacción en todo momento.
                     </p>
-                    <p>
+                    <p style="text-align: justify;">
                         ¡Confíe en nosotros para el cuidado y protección de su carro en nuestro parqueadero de carros!
                     </p>
                 </div>
@@ -66,14 +66,14 @@
 
                 <div class="entrada__text">
                     <h4 class="no-margin">Parqueadero de motos</h4>
-                    <p>
+                    <p style="text-align: justify;">
                         En nuestro parqueadero de motos, contamos con espacios de estacionamiento amplios y separados, para garantizar que cada moto esté totalmente protegida. Además,  ofrecemos medidas de seguridad adicionales como cámaras de vigilancia, para prevenir robos y vandalismo.
                     </p>
-                    <p>
+                    <p style="text-align: justify;">
                         De igual manera, nuestro equipo de seguridad y vigilancia está atento para garantizar la seguridad de su moto. Nos preocupamos por la satisfacción de nuestros clientes y siempre buscamos brindar un servicio de calidad, amigable y eficiente.
                     </p>
 
-                    <p>
+                    <p style="text-align: justify;">
                         ¡Confíe en nosotros para el cuidado y protección de su moto en nuestro parqueadero de motos!
 
                     </p>

@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="icon" href="../img/icon.png">
 
     <link rel="stylesheet" href="../styles.css">
@@ -48,7 +48,7 @@
                 
                 <div class="entrada__text">
                     <h4 class="no-margin">Parqueadero CCAJ</h4>
-                    <p>
+                    <p style="text-align: justify;">
                         Parqueadero CCAJ es una empresa que construye soluciones inteligentes de parqueo, con una alta tecnología. Es avanzado en Latinoamérica en diseñar, construir y puesta en funcionamiento de los sistemas mecanizados de parqueaderos.
                         Nuestra empresa cuenta con un equipo interdisciplinario con experiencia en el desarrollo de proyectos, instalación, mantenimiento y operación.
                     </p>

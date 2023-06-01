@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +19,14 @@
 </head>
 
 <body>
+
+<!-- <script>
+        function finalHour(){
+
+            var tot = <?php $total; ?>
+            return tot;
+        }
+</script> -->
 
 <!--Header - nav-->
 <header>
@@ -107,7 +116,6 @@
   <tbody>
 
     <?php
-
     while ($rowSql = $sql -> fetch_assoc()){  ?>
 
         <tr>

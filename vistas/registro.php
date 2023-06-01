@@ -71,6 +71,7 @@
                     include("../controlador/registro_user.php");
                     include("../controlador/date_controller.php");
                     include("./date.php");
+                    include("../modelo/contador.php");
                     ?>
 
                 <input type= "hidden" name = "fecha" value = "<?= $fecha?>">

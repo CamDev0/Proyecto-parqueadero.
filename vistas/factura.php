@@ -1,6 +1,7 @@
 <?php
     include "../modelo/DB.php";
     include "./date.php";
+    include "../modelo/contador.php";
     include "../controlador/cliente_controller.php";
 
         $id = $_GET["idT"];
@@ -23,6 +24,7 @@
 </head>
 
 <body>
+
 <!--Header - nav-->
 <header>
     <?php
@@ -59,20 +61,22 @@
                         <div class="campos">
                             <label>Fecha salida: </label>
                             <input class="form" type="text" readonly onmousedown="return false;" name="nombre" value = "<?= $fecha;?>">
-                        </div> 
-
-                        <div class="campos">
-                            <label>Total a pagar: </label>
-                            <input class="form" type="text" readonly onmousedown="return false;" name="nombre" value = "<?= $datos -> idUser?>">
-                        </div> 
-                        
-                    </div> 
-                    
-                    <?php
+                        </div>  
+                        <?php
                     }
                     ?>
+                    <div class="campos">
+                        <label>Minutos de servicio: </label>
+                        <input class="form" type="text" readonly onmousedown="return false;" name="minutos" value = "<?= $total;?>">
+                    </div> 
+                    
+                    <div class="campos">
+                        <label>Total a pagar: </label>
+                        <input class="form" type="text" readonly onmousedown="return false;" name="total" value = "<?= $total * 59?>">
+                    </div> 
+                </div> 
 
-                    </form>
+    </form>
                     <div class="ubicar-boton">
                         <a class="boton" href = "factura.php?idFin= <?= $id?>">Finalizar</a>
                     </div>

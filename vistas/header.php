@@ -8,6 +8,7 @@
                     <nav class="nav">
                         <a href="nosotros.php" class="nav__link">Acerca de</a>
                         <a href="contacto.php" class="nav__link">Contacto</a>
+                        <a href="precios.php" class="nav__link">Valoraciones</a>
                         <a href="./login.php" class="nav__link">Admin</a>
                     </nav>
             </div>
